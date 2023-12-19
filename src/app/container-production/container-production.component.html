@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="main-image" [ngStyle]="{'background-image': 'url(' + images[currentImageIndex].mainImage + ')'}">
+    <div *ngIf="fadeIn" class="title" [ngStyle]="images[currentImageIndex].titleStyles">
+      {{ images[currentImageIndex].title }}
+    </div>
+    <div class="overlay" [ngClass]="{'fade-in': fadeIn}">
+
+      <div *ngIf="fadeIn" class="caption" [ngStyle]="images[currentImageIndex].captionStyles">{{
+        images[currentImageIndex].caption }}
+      </div>
+      <img *ngIf="fadeIn" [src]="images[currentImageIndex].overlayImage" alt="Overlay Image">
+    </div>
+    <div *ngIf="fadeIn" class="text-container">
+      <div *ngIf="fadeIn" class="text1" [ngStyle]="images[currentImageIndex].text1Styles">{{
+        images[currentImageIndex].text1 }}</div>
+      <div *ngIf="fadeIn" class="text2" [ngStyle]="images[currentImageIndex].text2Styles">{{
+        images[currentImageIndex].text2 }}</div>
+      <div *ngIf="fadeIn" class="text3" [ngStyle]="images[currentImageIndex].text3Styles">{{
+        images[currentImageIndex].text3 }}</div>
+    </div>
+    <div class="buttons-words">
+      <div class="word-container" (click)="goToImage(0)" [ngClass]="{'active': currentImageIndex === 0}" (mouseenter)="onWordHover(0)" (mouseleave)="onWordLeave(0)">
+        <div class="word">{{wordOne}}</div>
+        <div class="line" [ngClass]="{'active': currentImageIndex === 0}"></div>
+      </div>
+      <div class="word-container" (click)="goToImage(1)" [ngClass]="{'active': currentImageIndex === 1}" (mouseenter)="onWordHover(1)" (mouseleave)="onWordLeave(1)">
+        <div class="word">{{wordTwo}}</div>
+        <div class="line" [ngClass]="{'active': currentImageIndex === 1}"></div>
+      </div>
+      <div class="word-container" (click)="goToImage(2)" [ngClass]="{'active': currentImageIndex === 2}" (mouseenter)="onWordHover(2)" (mouseleave)="onWordLeave(2)">
+        <div class="word">{{wordThree}}</div>
+        <div class="line" [ngClass]="{'active': currentImageIndex === 2}"></div>
+      </div>
+    </div>
+</div>
+
+
+  
+
+ 
+
+
+

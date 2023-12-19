@@ -1,0 +1,21 @@
+<div class="container" (mouseover)="handleAnimation()">
+    <div class="p-container">
+        <div class="title">{{title}}</div>
+        <div class="text">
+            <span class="text1">{{text1}}</span>
+            <span class="animation">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </span>
+            <span *ngIf="displayText === text2" class="text2">{{text2}}</span>
+            <span *ngIf="displayText === text3" class="text3">{{text3}}</span>
+        </div>
+    </div>
+</div>

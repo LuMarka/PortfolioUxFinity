@@ -1,0 +1,534 @@
+@import 'src/styles';
+
+.container-main {
+  width: 100%;
+  background: #0D0D0D;
+}
+
+.container-one,
+.container-two,
+.container-three,
+.container-four {
+  width: auto;
+  display: flex;
+  margin: 0 150px;
+}
+
+.container-one {
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 150px 0;
+
+
+ .morfi {
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding-left: 77px;
+    position: relative; 
+
+
+    .morfi-img {
+      width: 463px;
+      height: 566px;
+
+    }
+  }
+
+  .morfi1,
+  .morfi2,
+  .morfi3 {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  .morfi1 {
+    width: 50%;
+    right: 0;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+
+  .morfi2 {
+    width: 70%;
+    left: 80px;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  }
+
+  .morfi3 {
+    width: 27%;
+    right: 30px;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  &:hover .morfi1,
+  &:hover .morfi2 {
+    opacity: 1;
+    transform: translateY(-168%);
+    display: block;
+  }
+
+
+  &:hover .morfi3 {
+    opacity: 1;
+    transform: translateY(-175%);
+    display: block;
+  }
+
+  .text1 {
+    color: #FFF;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 24px 0;
+  }
+
+  .text2 {
+    color: #FFF;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+  }
+
+  .text3 {
+    color: #5C5C5C;
+    display: none;
+    padding: 8px 0 24px 0;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  :hover .text3 {
+    display: block;
+    opacity: 1;
+  }
+
+  .mazing {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    padding-top: 330px;
+    position: relative;
+
+    .mazing1 {
+      width: 463px;
+      height: 566px;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .text1maz,
+    .text2maz,
+    .text3maz {
+      font-family: 'Plus Jakarta Sans';
+      color: #FFF;
+    }
+
+    .text1maz {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 30px;
+      padding: 24px 0;
+    }
+
+    .text2maz {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+/*     .text3maz {
+      color: #5C5C5C;
+      display:none;
+      //opacity: 0;
+      padding: 8px 0 24px 0;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+
+    :hover .text3maz {
+      display: block;
+      opacity: 1;
+    } */
+  } 
+}
+
+
+.container-two {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  padding-top: 100px;
+  position: relative;
+
+  img {
+    width: 100%;
+    padding: 0 190px 0 100px;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .mockup {
+    width: 35%; 
+    position: absolute;
+    left: -50%; /* Mueve el mockup fuera del contenedor hacia la izquierda */
+    top: 180px;;
+    opacity: 0; /* Inicialmente oculta el mockup */
+    transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+  }
+
+  span {
+    color:#5C5C5C;
+    display: none;
+    padding-bottom:24px ;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 0 190px 0 100px;
+  } 
+  :hover .text1gymate{
+    display:block;
+    opacity:1;
+  }
+  :hover .mockup {
+    opacity: 1;
+    left: 90px; 
+  }
+}
+
+
+.container-three {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 100px;
+
+  .mia img {
+    width: 1150px;
+    
+    justify-content: flex-end;
+    padding-right: 80px;
+    /* padding:  0 105px 0 240px; */
+  }
+.text1{
+  color: #FFF;
+  font-family: 'Plus Jakarta Sans';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; 
+  padding:24px 0;
+  }
+.text2{
+  color: #FFF;
+  font-family: 'Plus Jakarta Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px;
+}
+  span {
+    color:#5C5C5C;
+    display: none;
+    padding:8px 0 24px 0;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+  } 
+  :hover .text3{
+    display:block;
+    opacity:1;
+  }
+}
+
+
+.container-four {
+  width: 80%;
+  padding-top: 100px;
+  display:inline-block;
+  flex-direction: column;
+  align-items:flex-start ;
+  
+  .img1,
+  .img2 {
+    width:100%;
+    padding: 0 213px 0 77px;
+    transition: opacity 0.5s ease-in-out;
+
+  }
+  .img1 {
+    opacity: 1;
+    z-index: 0;
+    
+  }
+  .img2 {
+    opacity: 0;  
+    z-index: 0;
+    display:none;
+  }
+  :hover .img1{
+    opacity: 0;
+    display:none;
+  
+  }
+  :hover .img2{
+    opacity: 1;
+    display:block;
+  }
+}
+
+
+
+@media (min-width: 400px) and (max-width: 1024px) {
+  .container{
+    margin: 0;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-one,
+  .container-two,
+  .container-three,
+  .container-four {
+    flex:1;
+    width:100%;
+    padding: 60px 80px; 
+    margin:0;
+   
+    .morfi-img,
+    .mazing-img {
+      flex:1;
+      padding:0;
+      width:100%;
+    }
+
+
+
+
+
+
+
+
+
+
+//ver del container one que cambiar para queries
+    .container-one {
+      width: 80%;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 150px 0;
+    
+    
+     .morfi {
+        flex-direction: column;
+        justify-content: flex-start; 
+        padding-left: 77px;
+        position: relative; 
+    
+    
+        .morfi-img {
+          width: 463px;
+          height: 566px;
+    
+        }
+      }
+    
+      .morfi1,
+      .morfi2,
+      .morfi3 {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+    
+      .morfi1 {
+        width: 50%;
+        right: 0;
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+      }
+    
+      .morfi2 {
+        width: 70%;
+        left: 80px;
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+      }
+    
+      .morfi3 {
+        width: 27%;
+        right: 30px;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      }
+    
+      &:hover .morfi1,
+      &:hover .morfi2 {
+        opacity: 1;
+        transform: translateY(-168%);
+        display: block;
+      }
+    
+    
+      &:hover .morfi3 {
+        opacity: 1;
+        transform: translateY(-175%);
+        display: block;
+      }
+    
+      .text1 {
+        color: #FFF;
+        font-family: 'Plus Jakarta Sans';
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px;
+        padding: 24px 0;
+      }
+    
+      .text2 {
+        color: #FFF;
+        font-family: 'Plus Jakarta Sans';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 48px;
+      }
+    
+      .text3 {
+        color: #5C5C5C;
+        display: none;
+        padding: 8px 0 24px 0;
+        font-family: 'Plus Jakarta Sans';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+      }
+    
+      :hover .text3 {
+        display: block;
+        opacity: 1;
+      }
+    
+      .mazing {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: flex-end;
+        padding-top: 330px;
+        position: relative;
+    
+        .mazing1 {
+          width: 463px;
+          height: 566px;
+          transition: opacity 0.3s ease-in-out;
+        }
+    
+        .text1maz,
+        .text2maz,
+        .text3maz {
+          font-family: 'Plus Jakarta Sans';
+          color: #FFF;
+        }
+    
+        .text1maz {
+          font-size: 30px;
+          font-weight: 600;
+          line-height: 30px;
+          padding: 24px 0;
+        }
+    
+        .text2maz {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 48px;
+        }
+    
+    /*     .text3maz {
+          color: #5C5C5C;
+          display:none;
+          //opacity: 0;
+          padding: 8px 0 24px 0;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 30px;
+        }
+    
+        :hover .text3maz {
+          display: block;
+          opacity: 1;
+        } */
+      } 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .container-two {
+      
+
+      img {
+      
+      }
+
+      .mockup {
+   
+      }
+
+      span {
+        
+      }
+    }
+
+    .container-three {
+     
+
+      .mia img {
+       
+      }
+    }
+
+    .container-four {
+     
+
+      .img1,
+      .img2 {
+        
+      }
+    }
+  }
+}

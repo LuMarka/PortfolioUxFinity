@@ -1,0 +1,119 @@
+@import 'src/styles';
+
+.container{
+    display: flex;
+    max-width: 100%;
+    padding: 150px;
+    flex-direction: column;
+    align-items: center;
+    gap: 172px;
+    background-color: $background-color1;
+    margin:0; 
+    position: relative;
+}
+
+.animation img {
+  /* Agrega estilos a tus imágenes aquí */
+  width: 50px; /* Ajusta según sea necesario */
+  height: 50px; /* Ajusta según sea necesario */
+  border-radius: 50%;
+  /* ... */
+  position: absolute; /* Posiciona las imágenes absolutamente dentro del contenedor */
+}
+
+
+.title,
+.text1,
+.text2,
+.text3{
+    font-family: $font-family1;
+    font-size: $font-size8;
+    font-style: normal;
+    font-weight: $font-weight5;
+    line-height: 80px;
+    text-align: center;
+}
+
+.title, 
+.text1{
+    color: #B2A3CC;
+}
+.text2,
+.text3{
+    text-transform: uppercase;
+    background: linear-gradient(292deg, #E0D9FF 90.46%, #5C3E6E 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+.text{
+    gap:8px;
+    text-align: center;
+}
+
+.text3 {
+  display: none; /* Por defecto, oculta text3 */
+}
+
+.text1{
+    animation: moveLeft 4s linear infinite alternate; 
+}
+@keyframes moveLeft {
+
+    0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-100px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+  }
+
+.text2,
+.text3{
+    animation: moveRight 4s linear infinite alternate; 
+}
+  @keyframes moveRight {
+    0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(100px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+  }
+
+
+  .container:hover .animation img{
+    animation-play-state: paused; /* Pausar la animación al hacer hover */
+  }
+  
+  .container:hover .text2 {
+    display:none ; /* Mostrar text2 al hacer hover */
+  }
+  
+  .container:hover .text3 {
+    display: block; /* Ocultar text3 al hacer hover */
+  }
+
+
+
+  @media (min-width: 400px) and (max-width: 880px) {
+   .container{
+    padding: 60px 80px;
+   }
+   
+    .title,
+    .text1,
+    .text2,
+    .text3{
+    font-size: $font-size9;
+    font-weight: $font-weight4;
+    line-height: 72px;
+}
+  }

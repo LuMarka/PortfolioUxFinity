@@ -1,0 +1,49 @@
+<div class="container-main">
+    <div class="container-one">
+        <div class="morfi-container">
+            <div class="morfi">
+                <img class="morfi-img" src="{{imgUrl}}" alt="Morfi Image" />
+                <p class="text1">{{text1Morfi}}</p>
+                <p class="text2">{{text2Morfi}}</p>
+                <p class="text3">{{text3Morfi}}</p>
+                <img class="morfi1" [src]="morfi1" alt="Animation image 1">
+                <img class="morfi2" [src]="morfi2" alt="Animation image 2">
+                <img class="morfi3" [src]="morfi3" alt="Animation image 3">
+            </div>
+        </div>
+        <div class="mazing-container">
+            <div class="mazing">
+                <img class="mazing1" src="{{imgUrlmazing}}" alt="Mazing Image" />
+                <p class="text1maz">{{text1Mazing}}</p>
+                <p class="text2maz">{{text2Mazing}}</p>
+                <p class="text3">{{text3Mazing}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-two">
+        <div class="gymate">
+            <img src="{{imgUrlgymate}}" alt="Gymmatte Image" />
+            <img class="mockup" [src]="gymateMockupUrl" alt="Gymate Mockup Image" />
+            <span class="text1gymate">{{text1gymate}}</span>
+        </div>
+    </div>
+    <div class="container-three">
+        <div class="mia">
+            <!-- <video #videoPlayer [src]="miaUrl" muted (ended)="pauseVideo()"></video> -->
+            <img [src]="miaUrl" alt="GIF Animado de Mia jewellery">
+            <p class="text1">{{text1}}</p>
+            <p class="text2">{{text2}}</p>
+            <div><span class="text3">{{text3}}</span></div>
+        </div>
+    </div>
+
+    <div class="container-four" (mouseover)="cambiarImagen()" (mouseout)="cambiarImagen()">
+        <div class="ai">
+            <img class="img1" [ngStyle]="{'opacity': currentImgIndex === 0 ? 1 : 0}" src="{{imgUrlai[0]}}"
+                alt="Kill Donkey Image" />
+            <img class="img2" [ngStyle]="{'opacity': currentImgIndex === 1 ? 1 : 0}" src="{{imgUrlai[1]}}"
+                alt="Kill Donkey Image" />
+        </div>
+    </div>
+</div>
+  

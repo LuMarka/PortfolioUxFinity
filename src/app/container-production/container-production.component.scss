@@ -1,0 +1,194 @@
+ @import 'src/styles'; 
+
+.container {
+  max-width:100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding:0;
+  margin:0; 
+  
+}
+
+.main-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 10%; 
+  left: -5%;
+  /*width: 100%;  */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end; 
+  opacity: 0;
+  transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+}
+
+
+.title {
+  color: #FFF;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100px;
+  position: relative;
+  animation: title_anim 6s linear;
+  transform-origin: bottom;
+}
+
+@keyframes title_anim {
+  0% {
+    transform: rotatex(90deg);
+  }
+
+  50% {
+    transform: rotatex(0deg);
+  } 
+
+  100% {
+    transform: rotatex(-90deg);
+  }
+}
+
+.fade-in .title::after {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+
+.caption {
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 45px; 
+}
+
+.fade-in {
+  left: 100px; /* Posición final después de la animación */
+  opacity: 1;
+}
+
+.text-container {
+  width: 45%;
+  position: absolute;
+  top: 0;
+  transform: translateY(50%);
+  padding-top: 356px;
+  left:50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: desplazarArriba 1s forwards;
+
+@keyframes desplazarArriba {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+}
+
+.fade-in .text1, 
+.fade-in .text2,
+.fade-in .text3 {
+  font-family: 'Montserrat';
+  opacity: 1;
+  transform: translateY(0) ;
+  animation: transform 5s ease-in-out, opacity 5s ease-in-out;
+}
+
+.fade-in .text1, 
+.fade-in .text2, 
+.fade-in .text3 {
+  opacity: 1;
+}
+
+.buttons-words{
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  bottom: 10%;
+  right: 196px;
+  opacity: 1;
+ 
+}
+.buttons-words {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.word-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.word {
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 45px;
+  padding-bottom: 24px;
+  position:relative;
+  //opacity:1;
+  
+}
+
+.line {
+  width: 100%;
+  background-color: #fff;
+  height: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+}
+
+.word-container:hover .line {
+  opacity: 1;
+}
+.word:not(:hover)  {
+  opacity: 0.5;
+}
+
+.fade-in .word:not(:hover),
+.fade-in .line:not(:hover) {
+  opacity: 0.5;
+  color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

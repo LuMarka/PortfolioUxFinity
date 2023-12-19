@@ -1,0 +1,184 @@
+@import 'src/styles';
+
+.container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: $background-color1;
+    color: $font-color2;
+    gap: 172px;
+    padding:0;
+    margin:0; 
+  }
+  
+  // Estilos del contenedor izquierdo
+  .left-container {
+    width: 50%;
+    flex: 1; 
+    display: flex;
+    flex-direction: column ;
+    justify-content: flex-start;
+    padding: 100px 0px 150px 150px;
+    align-items: flex-start;
+    gap:16px;
+  }
+  
+  .left-container h2 {
+    font-family: $font-family1;
+    font-size: 48px;//modifico tamaño letra de 40 a 48px
+    font-weight: 600;
+    line-height: 50px; 
+    background: var(--secundario, linear-gradient(272deg, #E0D9FF 0%, #5C3E6E 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .left-container h4 {
+    color: #5C5C5C;
+    font-family: $font-family1;
+    font-size: 24px;//modifico tamaño letra de 16 a 24px
+    font-weight: $font-weight2;
+    line-height: 48px;// aumento 8px
+
+  }
+  
+  // Estilos del contenedor derecho
+  .right-container {
+    width: 50%;
+    flex: 1; 
+    display: flex;
+    flex-direction: column ;
+    justify-content: flex-start;
+    padding: 100px 77px 150px  73px; //modifico y agrego padding  a la izquierda y quito a la derecha
+    align-items: flex-start;
+    gap:32px;
+
+  }
+  
+  .title {
+    color: $font-color2;
+    font-family: $font-family1;
+    font-size: $font-size7;//modifico tamaño letra de 32 a 40px
+    font-weight: $font-weight3;
+    line-height: 48px;// aumento 8px
+  }
+  
+  .content {
+    color:  rgba(219, 219, 219, 0.60);
+    font-family: 'Microsoft Sans Serif';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: $font-weight2;
+    line-height: 155%; 
+  }
+  .vector{
+    width: 28px;
+    height: 14px;
+    flex-shrink: 0;
+    stroke-width: 2px;
+    stroke: #FFF;
+  }
+button{
+  gap:16px;
+}
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease; 
+
+}
+  
+
+@include media-up(mobile) {
+  
+  .left-container h2 {
+    font-size: 40px;
+  }
+  .left-container h4 {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .right-container {
+    padding: 100px 150px 150px  0px;
+  }
+  .title {
+    font-size:32px;
+    line-height: 40px;
+  }
+  
+}
+
+@include media-up(tablet) {
+
+  .left-container h2 {
+    font-size: 40px;
+  }
+  .left-container h4 {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .right-container {
+    padding: 100px 150px 150px  0px;
+  }
+  .title {
+    font-size:32px;
+    line-height: 40px;
+  }
+  
+}
+
+@include media-up(ipad) {
+
+  .left-container h2 {
+    font-size: 40px;
+  }
+  .left-container h4 {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .right-container {
+    padding: 100px 150px 150px  0px;
+  }
+  .title {
+    font-size:32px;
+    line-height: 40px;
+  }
+  
+}
+
+@include media-up(screenXs) {
+
+  .left-container h2 {
+    font-size: 40px;
+  }
+  .left-container h4 {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .right-container {
+    padding: 100px 150px 150px  0px;
+  }
+  .title {
+    font-size:32px;
+    line-height: 40px;
+  }
+  
+}
+
+@include media-up(large) {
+  .left-container h2 {
+    font-size: 40px;
+  }
+  .left-container h4 {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .right-container {
+    padding: 100px 150px 150px  0px;
+  }
+  .title {
+    font-size:32px;
+    line-height: 40px;
+  }
+  
+}

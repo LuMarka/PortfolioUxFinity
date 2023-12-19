@@ -1,0 +1,230 @@
+@import 'src/styles';
+
+.container {
+    max-width: 100%;
+    background-color: $background-color1;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(87deg, #191919 0.58%, rgba(21, 21, 21, 0.00) 47.24%);
+    padding:0;
+    margin:0; 
+}
+
+.container-text {
+    width: 55%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 150px 0 150px 150px;
+}
+
+
+.container-two {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-bottom: 24px;
+}
+
+.title,
+.title2 {
+    color: #FFF;
+    font-family: $font-family1;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px;
+    color: var(--color-page-text-principal, #FFF);
+}
+
+.title3 {
+    background: linear-gradient(274deg, #E0D9FF 55.31%, #5C3E6E 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: $font-family1;
+    font-size: $font-size9;
+    font-style: normal;
+    font-weight: $font-weight3;
+    line-height: 65px;
+
+}
+
+.text {
+    width: 70%;
+
+}
+
+.text-one {
+    color: var(--color-page-txt-disabled, rgba(219, 219, 219, 0.60));
+    font-family: $font-family1;
+    font-size: $font-size10;
+    font-style: normal;
+    font-weight: $font-weight5;
+    line-height: 40px;
+    padding-bottom: 48px;
+}
+
+.text-two {
+    color: #FFF;
+    font-family: $font-family1;
+    font-size: $font-size3;
+    font-style: normal;
+    font-weight: $font-weight5;
+    line-height: 48px;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left:0;
+        //right: 75%;
+        position: absolute;
+        background: linear-gradient(272deg, #E0D9FF 0%, #5C3E6E 46.12%);
+        transform: scaleX(0);
+        transform-origin: bottom left;
+        transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+
+    }
+
+    &:hover::after {
+        width: 26%;
+        transform-origin: bottom right;
+        transform: scaleX(1);
+    }
+
+
+    &.hovered {
+        transform: translateX(7px);
+      }
+    .text2 {
+        margin-right: 16px;
+        transition: color 0.5s ease-in-out, transform 0.3s ease-out; 
+        &:hover {
+          color:  #9070a2;
+          
+        }
+      }
+
+    .arrow {
+        width: 32px;
+        height: 32px;
+        transition: transform 0.3s ease-out;
+
+        &:hover {
+            transform: translateX(7px);
+        }
+    }
+}
+.text-two:hover {
+    @extend .hovered;
+  }
+
+.container-right {
+    width: 45%;
+    padding-top: 150px;
+    overflow: hidden;
+
+}
+
+.container-right {
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0);
+        /* disables highlighting on mobile */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+
+    }
+
+    .img-header {
+        width: 150%;
+        height: 150%
+    }
+}
+
+@media (min-width: 400px) and (max-width: 880px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-text {
+        display: flex;
+        width: 100%;
+        padding:60px 80px 0px 80px;
+    }
+
+    .container-right {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        //align-self: flex-start;
+        justify-content: center;
+        padding:0px 80px 60px 80px;
+    }
+
+    .container-title {
+
+        .title,
+        .title2 {
+            font-size: 44px;
+            line-height: 56px;
+        }
+
+        .title3 {
+            font-size: 44px;
+            line-height: 57px;
+        }
+
+    }
+}
+
+@media (min-width: 881px) and (max-width: 1199px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding:150px 150px 0px 150px;
+
+    .container-text,
+    .container-right{
+        width:80%;
+        flex: 1;  
+        padding:0;
+    }
+/*     .container-text{
+        width:80%;
+    } */
+    .container-right {
+        width: 100%;
+        height: 100vh;
+        align-self: flex-start;
+        justify-content: center;
+    }
+    }
+    .container-title {
+
+        .title,
+        .title2 {
+            font-size: 44px;
+            line-height: 56px;
+        }
+
+        .title3 {
+            font-size: 44px;
+            line-height: 57px;
+        }
+
+    }
+}

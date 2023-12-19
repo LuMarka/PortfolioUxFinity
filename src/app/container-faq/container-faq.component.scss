@@ -1,0 +1,104 @@
+@import 'src/styles';
+
+.container{
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 150px;
+    margin:0; 
+    //gap: 48px;
+    background-color: $background-color;
+}
+.title{
+    color: $font-color2;
+    font-family: $font-family1;
+    font-size: $font-size9;
+    font-style: normal;
+    font-weight: $font-weight3;
+    line-height: 60px; 
+    padding-bottom: 48px;
+}
+.container-faq{
+    width: 66%;
+    //width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.container-item{
+    padding: 24px 0;
+}
+
+.accordion-header{
+    flex: 1 0 0;
+    color: $font-color2;
+    font-family: $font-family3;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: $font-weight2;
+    line-height: 120%; 
+    padding-bottom: 16px;
+}
+
+
+.content{
+    width: 77%;
+    align-self: stretch;
+    color: $font-color3;
+    font-family: $font-family3;
+    font-size: $font-size2;
+    font-style: normal;
+    font-weight: $font-weight2;
+    line-height: 155%;
+}
+.vector{
+    width: 28px;
+    height: 14px;
+    flex-shrink: 0;
+    stroke-width: 2px;
+    stroke: #FFF;
+  }
+button{
+  gap:16px;
+}
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease; 
+
+}
+.linea-divisoria {
+    display: flex;
+    width: 100%;
+    padding: 1.5px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    background:  #393939;
+    height: 1.5px; 
+    background: var(--dividers, #393939);
+    margin: 0 auto;
+  }
+  
+
+  @media (min-width: 400px) and (max-width: 880px){
+    .container{
+        padding: 60px 80px;
+       
+    }
+    .title{
+      font-size: 44px;
+      font-weight: $font-weight2;
+      line-height: 52px; 
+      padding-bottom: 40px;
+  }
+  .accordion-header{
+    font-size: 20px;
+    font-weight: $font-weight1;
+    padding-bottom: 8px;
+}
+.content{
+    font-size: 12px;
+    font-weight: $font-weight1;
+}
+  }

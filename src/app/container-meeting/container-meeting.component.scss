@@ -1,0 +1,59 @@
+@import 'src/styles';
+.container{
+    max-width: 100%;
+    display: flex;
+    padding: 150px;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    background: var(--color-base-black-friendly, #0D0D0D);
+    margin:0; 
+}
+.container-meeting{
+    width: 73%;
+}
+
+.container-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-family: $font-family1;
+    font-style: normal;
+    text-align: center;
+    padding-bottom: 42px;
+    .title{
+        font-size: $font-size9;
+        font-weight: $font-weight3;
+        line-height: 60px; 
+        background: var(--secundario, linear-gradient(272deg, #E0D9FF 0%, #5C3E6E 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text{
+        color: var(--color-page-txt-disabled, rgba(219, 219, 219, 0.60));
+        font-size: $font-size1;
+        font-weight: $font-weight5;
+        line-height: 30px;
+        width:65%;
+    }
+}
+.calendar{
+    max-width: 100%;
+    padding:0;
+    margin:0; 
+}
+.calendly-inline-widget {
+    overflow: hidden;
+  }
+
+
+  @media (min-width: 400px) and (max-width: 880px){
+    .container{
+        padding: 60px 80px;
+        gap: 21px;
+    }
+  }
+  

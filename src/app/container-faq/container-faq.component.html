@@ -1,0 +1,145 @@
+<div class="container">
+    <h2 class="title">FAQ</h2>
+    <div class="container-faq">
+
+        <div class="accordion-item container-item">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                (click)="cambiarElementoAbierto(1)">
+                <h2 class="accordion-header" id="headingOne">{{categorie1}}</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="17" viewBox="0 0 31 17" fill="none"
+                    [ngClass]="{'rotate': flechaArriba[0]}">
+                    <path d="M1.5 1L15.5 15L29.5 1" stroke="white" stroke-width="2" />
+                </svg>
+            </button>
+            <div id="collapseOne" class="accordion-collapse collapse" [ngClass]="{'show': elementoAbierto === 1}"
+                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body content">
+                    <p>{{categorie1Text}}.</p>
+                </div>
+            </div>
+            <!-- <div *ngIf="elementoAbierto === 1" class="linea-divisoria"></div> -->
+        </div>
+    </div>
+
+    <div class="linea-divisoria"></div>
+
+    <div class="container-faq">
+        <div class="accordion-item container-item">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                (click)="cambiarElementoAbierto(2)">
+                <h2 class="accordion-header" id="headingtwo">{{categorie2}}</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="17" viewBox="0 0 31 17" fill="none"
+                    [ngClass]="{'rotate': flechaArriba[1]}">
+                    <path d="M1.5 1L15.5 15L29.5 1" stroke="white" stroke-width="2" />
+                </svg>
+            </button>
+            <div id="collapseTwo" class="accordion-collapse collapse" [ngClass]="{'show': elementoAbierto === 2}"
+                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body content">
+                    <p>{{categorie2Text}}.</p>
+                </div>
+            </div>
+            <!-- <div *ngIf="elementoAbierto === 2" class="linea-divisoria"></div> -->
+
+        </div>
+    </div>
+    <div class="linea-divisoria"></div>
+
+    <div class="container-faq">
+        <div class="accordion-item container-item">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                (click)="cambiarElementoAbierto(3)">
+                <h2 class="accordion-header" id="headingThree">{{categorie3}}</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="17" viewBox="0 0 31 17" fill="none"
+                    [ngClass]="{'rotate': flechaArriba[2]}">
+                    <path d="M1.5 1L15.5 15L29.5 1" stroke="white" stroke-width="2" />
+                </svg>
+            </button>
+            <div id="collapseThree" class="accordion-collapse collapse" [ngClass]="{'show': elementoAbierto === 3}"
+                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body content">
+                    <p>{{categorie3Text}}.</p>
+                </div>
+            </div>
+            <!-- <div *ngIf="elementoAbierto === 3" class="linea-divisoria"></div> -->
+
+        </div>
+    </div>
+
+    <div class="linea-divisoria"></div>
+
+    <div class="container-faq">
+        <div class="accordion-item container-item">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                (click)="cambiarElementoAbierto(4)">
+                <h2 class="accordion-header" id="headingFour">{{categorie4}}</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="17" viewBox="0 0 31 17" fill="none"
+                    [ngClass]="{'rotate': flechaArriba[3]}">
+                    <path d="M1.5 1L15.5 15L29.5 1" stroke="white" stroke-width="2" />
+                </svg>
+            </button>
+            <div id="collapseFour" class="accordion-collapse collapse" [ngClass]="{'show': elementoAbierto === 4}"
+                aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body content">
+                    <p>{{categorie4Text}}.</p>
+                </div>
+            </div>
+            <!-- <div *ngIf="elementoAbierto === 4" class="linea-divisoria"></div> -->
+
+        </div>
+    </div>
+
+    <div class="linea-divisoria"></div>
+
+    <div class="container-faq">
+        <div class="accordion-item container-item">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                (click)="cambiarElementoAbierto(5)">
+                <h2 class="accordion-header" id="headingOne">{{categorie5}}</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="17" viewBox="0 0 31 17" fill="none"
+                    [ngClass]="{'rotate': flechaArriba[4]}">
+                    <path d="M1.5 1L15.5 15L29.5 1" stroke="white" stroke-width="2" />
+                </svg>
+            </button>
+            <div id="collapseFive" class="accordion-collapse collapse" [ngClass]="{'show': elementoAbierto === 5}"
+                aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body content">
+                    <p>{{categorie5Text}}.</p>
+                </div>
+            </div>
+            <!-- <div *ngIf="elementoAbierto === 5" class="linea-divisoria"></div> -->
+
+        </div>
+    </div>
+    <div class="linea-divisoria"></div>
+
+    <div class="container-faq">
+        <div class="accordion-item container-item">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"
+                (click)="cambiarElementoAbierto(6)">
+                <h2 class="accordion-header" id="headingSix">{{categorie6}}</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="17" viewBox="0 0 31 17" fill="none"
+                    [ngClass]="{'rotate': flechaArriba[5]}">
+                    <path d="M1.5 1L15.5 15L29.5 1" stroke="white" stroke-width="2" />
+                </svg>
+            </button>
+            <div id="collapseSix" class="accordion-collapse collapse" [ngClass]="{'show': elementoAbierto === 6}"
+                aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body content">
+                    <p>{{categorie6Text}}.</p>
+                </div>
+            </div>
+            <!-- <div *ngIf="elementoAbierto === 6" class="linea-divisoria"></div>
+ -->
+        </div>
+    </div>
+    <div class="linea-divisoria"></div>
+
+
+</div>

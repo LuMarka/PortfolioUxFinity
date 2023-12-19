@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+// _variables.scss
+@import '~bootstrap/dist/css/bootstrap.min.css';
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+@import "~normalize.css";
+@import "primeicons/primeicons.css";
+@import '~primeng/resources/primeng.min.css';
+
+
+
+body,
+:root{
+    max-width: 100%;
+    font-style: normal;
+    margin: 0; 
+    padding: 0; 
+  }
+
+
+$background-color1: #0D0D0D;
+$background-color: #111;
+
+$font-family1: 'Plus Jakarta Sans';
+$font-family2: 'Inter';
+$font-family3: 'Microsoft Sans Serif';
+
+$font-size1: 16px;
+$font-size2: 20px;
+$font-size3: 22px;
+$font-size4: 30px;
+$font-size5: 32px;
+$font-size6: 38px;
+$font-size7: 40px;
+$font-size8: 60px;
+$font-size9: 52px;
+$font-size10: 28px;
+
+$font-weight1: 300;
+$font-weight2: 400;
+$font-weight3: 600;
+$font-weight4: 700;
+$font-weight5: 500;
+
+$font-color1: linear-gradient(272deg, #E0D9FF 0%, #5C3E6E 46.12%);
+$font-color2: #FFF;
+$font-color3: #858E97;
+
+
+
+$breakpoints: (
+  mobileXs: 400px,
+  mobile: 480px,
+  tablet: 768px,
+  ipad: 820px,
+  screenXs: 880px,
+  screen: 1024px,
+  screenxl: 1069px,
+  desktop: 1200px,
+  large: 1440px,
+  xlarge: 1920px,
+);
+
+@mixin media-up($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+
+
+
+
