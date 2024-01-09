@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
 
+  statusmenu = false;
+
+  status () {
+    this.statusmenu = !this.statusmenu
+  }
+
   navTitle = "UXfinity";
   navlink1 = "Services";
   navlink2 = "Projects";

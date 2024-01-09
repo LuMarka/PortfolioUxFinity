@@ -1,12 +1,21 @@
-<nav>
+<nav class="desktop1">
+  <p class="title">{{ navTitle }}</p>
+  <div class="navbar-text">
+    <a class="nav-link" href="#container-categories">{{ navlink1 }}</a>
+    <a class="nav-link" href="#container-projects">{{ navlink2 }}</a>
+    <a class="nav-link" href="#container-our-professionals">{{ navlink3 }}</a>
+    <a class="nav-link" href="#footer">{{ navlink4 }}</a>
+  </div>
+</nav>
+<nav class="menue">
+  <div class="nav-menu">
     <p class="title">{{ navTitle }}</p>
-    <div class="navbar-text">
-      <a class="nav-link" href="#container-categories" >{{ navlink1 }}</a>
-      <a class="nav-link" href="#container-projects" >{{ navlink2 }}</a>
-      <a class="nav-link" href="#container-our-professionals" >{{ navlink3 }}</a>
-      <a class="nav-link" href="#footer" >{{ navlink4 }}</a>
-    </div>
-  </nav>
-  
-
-
+    <i class="pi pi-bars" (click)="status()"></i>
+  </div>
+  <div class="navbar-text-menu" *ngIf="statusmenu">
+    <a class="nav-link" href="#container-categories">{{ navlink1 }}</a>
+    <a class="nav-link" href="#container-projects">{{ navlink2 }}</a>
+    <a class="nav-link" href="#container-our-professionals">{{ navlink3 }}</a>
+    <a class="nav-link" href="#footer">{{ navlink4 }}</a>
+  </div>
+</nav>
